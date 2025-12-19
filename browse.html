@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Miray - Browse Questions</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: false,
+    theme: {
+      extend: {
+        colors: {
+          primary: "#2b8cee",              // Miray blue
+          "background-light": "#f6f7f8",   // landing ile aynı
+          "background-dark": "#ffffff",    // artık dark yok
+          "card-dark": "#ffffff",
+          "border-dark": "#e5e7eb",        // slate-200
+          "text-secondary": "#64748b"      // slate-500
+        },
+        fontFamily: {
+          display: ["Manrope", "sans-serif"],
+          body: ["Manrope", "sans-serif"]
+        },
+        borderRadius: {
+          "DEFAULT": "0.75rem",
+          "lg": "1rem",
+          "xl": "1.25rem",
+          "full": "9999px"
+        },
+      },
+    },
+  }
+</script>
+
+</head>
+<body class="bg-background-light text-[#0d141b] font-display min-h-screen flex flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-slate-200 px-10 py-4 bg-white z-50 sticky top-0">
+    <div class="flex items-center gap-4 text-white">
+<div class="size-8 text-primary">
+<svg class="size-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-white text-xl font-bold leading-tight tracking-[-0.015em]">Miray</h2>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="hidden md:flex items-center gap-9">
+<a class="text-white/70 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Home</a>
+<a class="text-white text-sm font-bold leading-normal" href="#">Browse</a>
+<a class="text-white/70 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Saved</a>
+<a class="text-white/70 hover:text-white text-sm font-medium leading-normal transition-colors" href="#">Profile</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Add Question</span>
+</button>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-border-dark" data-alt="User avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAn9WGBJjJpMCiywJCIBf8sfNo9E-l-HvNieuFLy3b-V61YHK_s_fWF1gF3aHs_KedZ5QAADfui_4YSZOfyKL0NkTJuqisqiHzXdfJxoQLHeDc7HtfriTOtdSynesDtYFkt9JSyHz6KxANWbBmESSwOq_zNbZPYH8O5f5c1UmEes6NLuPdqxVJV9-BfqABE07wEbF_clNNO4Kkx6Krk-zRP1nTFe_gCf6XEmnAmcK-uhdZtcQjbozggu3cC7Q2uPurIZl5yIb43gpKl");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1 flex flex-col items-center w-full px-4 md:px-10 pb-20">
+<div class="w-full max-w-[1200px] flex flex-col gap-8">
+<!-- Hero Search Section -->
+<div class="pt-10 pb-6">
+<div class="relative overflow-hidden rounded-3xl min-h-[400px] flex flex-col items-center justify-center text-center p-8 bg-cover bg-center" data-alt="Abstract dark gradient background with pink accents" style='background-image: linear-gradient(rgba(34, 17, 24, 0.7), rgba(34, 17, 24, 0.9)), url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQVpQRdImBNcz5HXexqJfhSfwl9ngna5MsvIkzdtRLEX-pREOYKld3k9iVWQdLqzpDhBlraggBhEry-158zBxQSgHST66ThN2szdWkYZ2xVpx8Bd9r8EUhJ3zZVYRoaB2yhM5HWlg_8C4MbIdteG82iGC5XBrMud7lLe1-nRSi8IK0u7eG7Ozgr2x6NoR713piI-Z1itGfdfS3zdgBvzo2mqqj-E7qHz3EwbVNl1oLudw7cfjg7JG7k9E5k4tMNO_tnLs8szSC-Tzt");'>
+<h1 class="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em] max-w-[700px] mb-4">
+                        Spark deeper connections on your next date.
+                    </h1>
+<p class="text-white/80 text-lg font-normal mb-10 max-w-[500px]">
+                        Explore thousands of conversation starters, from fun icebreakers to deep soul-searching questions.
+                    </p>
+<div class="w-full max-w-[600px] relative z-10">
+<label class="flex items-center w-full bg-card-dark border border-border-dark rounded-full h-16 px-2 shadow-xl focus-within:border-primary focus-within:ring-1 focus-within:ring-primary transition-all">
+<div class="pl-4 text-text-secondary">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="w-full bg-transparent border-none text-white placeholder:text-text-secondary focus:ring-0 text-lg px-4" placeholder="Search for icebreakers, topics..." type="text"/>
+<button class="bg-primary hover:bg-primary/90 text-white font-bold h-12 px-8 rounded-full transition-colors">
+                                Search
+                            </button>
+</label>
+</div>
+<!-- Trending Search Pills inside Hero -->
+<div class="mt-6 flex flex-wrap justify-center gap-3">
+<span class="text-sm text-white/60 font-medium py-1">Trending:</span>
+<a class="text-sm text-primary hover:text-white hover:underline transition-colors" href="#">First Date</a>
+<a class="text-sm text-primary hover:text-white hover:underline transition-colors" href="#">Red Flags</a>
+<a class="text-sm text-primary hover:text-white hover:underline transition-colors" href="#">Travel Dreams</a>
+</div>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="flex flex-col gap-6">
+<!-- Filters & Categories Header -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border-b border-border-dark pb-6">
+<div>
+<h2 class="text-white text-2xl font-bold leading-tight">Explore Questions</h2>
+<p class="text-text-secondary text-sm mt-1">Found 1,240 questions</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex bg-card-dark rounded-full p-1 border border-border-dark">
+<button class="px-4 py-1.5 rounded-full bg-primary text-white text-sm font-bold shadow-sm">All</button>
+<button class="px-4 py-1.5 rounded-full text-text-secondary hover:text-white text-sm font-medium transition-colors">Popular</button>
+<button class="px-4 py-1.5 rounded-full text-text-secondary hover:text-white text-sm font-medium transition-colors">Newest</button>
+</div>
+<button class="size-10 flex items-center justify-center rounded-full bg-card-dark border border-border-dark text-text-secondary hover:text-white hover:border-primary transition-all">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Category Chips Horizontal Scroll -->
+<div class="flex gap-3 overflow-x-auto pb-2 scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
+<button class="shrink-0 h-10 px-6 rounded-full border border-primary bg-primary/10 text-primary font-bold text-sm hover:bg-primary hover:text-white transition-all">
+                        🔥 Popular Now
+                    </button>
+<button class="shrink-0 h-10 px-6 rounded-full bg-card-dark border border-border-dark text-white font-medium text-sm hover:border-primary/50 transition-all">
+                        First Date
+                    </button>
+<button class="shrink-0 h-10 px-6 rounded-full bg-card-dark border border-border-dark text-white font-medium text-sm hover:border-primary/50 transition-all">
+                        Deep Talk
+                    </button>
+<button class="shrink-0 h-10 px-6 rounded-full bg-card-dark border border-border-dark text-white font-medium text-sm hover:border-primary/50 transition-all">
+                        Funny
+                    </button>
+<button class="shrink-0 h-10 px-6 rounded-full bg-card-dark border border-border-dark text-white font-medium text-sm hover:border-primary/50 transition-all">
+                        Intimacy
+                    </button>
+<button class="shrink-0 h-10 px-6 rounded-full bg-card-dark border border-border-dark text-white font-medium text-sm hover:border-primary/50 transition-all">
+                        Future Goals
+                    </button>
+<button class="shrink-0 h-10 px-6 rounded-full bg-card-dark border border-border-dark text-white font-medium text-sm hover:border-primary/50 transition-all">
+                        Controversial
+                    </button>
+<button class="shrink-0 h-10 px-6 rounded-full bg-card-dark border border-border-dark text-white font-medium text-sm hover:border-primary/50 transition-all">
+                        Career
+                    </button>
+</div>
+<!-- Content Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-2">
+<!-- Card 1 -->
+<div class="group relative flex flex-col justify-between p-6 h-[280px] bg-card-dark rounded-3xl border border-border-dark hover:border-primary/50 hover:shadow-[0_0_20px_rgba(238,43,124,0.1)] transition-all cursor-pointer">
+<div class="absolute top-6 right-6">
+<span class="material-symbols-outlined text-text-secondary hover:text-primary transition-colors cursor-pointer">bookmark</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="bg-blue-500/10 text-blue-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Icebreaker</span>
+</div>
+<h3 class="text-white text-xl font-bold leading-relaxed pr-8">
+                                If you could restart your life at age 10 with all the knowledge you have now, would you do it?
+                            </h3>
+</div>
+<div class="flex items-center justify-between mt-auto pt-6 border-t border-white/5">
+<div class="flex items-center gap-4 text-text-secondary">
+<button class="flex items-center gap-1.5 hover:text-white transition-colors group/btn">
+<span class="material-symbols-outlined text-[18px] group-hover/btn:text-primary transition-colors">favorite</span>
+<span class="text-xs font-bold">2.4k</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span class="text-xs font-bold">86</span>
+</button>
+</div>
+<div class="flex -space-x-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border-2 border-card-dark object-cover" data-alt="Avatar of user 1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfTlJXyrIA_rSbtHbClJZ7PN3_GkVL5f_VIMPrc2vwGYazbnPIz6-qXcnXZ8rCmCSME8N2WlyoVM5z02KCp-ps6IQBxfSpeSTogjoRhs22dVC6gatWTCHOBbt81BsoSi_lQD9ssvhkwTcPXPD2kY5dqJpE86PrXxCLC_lbsckAE2oOcCoB2QNm0sS2He40tEMwT4-SraBT0H8Fm98aHnTOkNikIkM-auGigzr-SyRzI3peAST4SLWEYQ6AUnJV5P0ZVh311EaaEpcj"/>
+<img alt="User avatar" class="w-8 h-8 rounded-full border-2 border-card-dark object-cover" data-alt="Avatar of user 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVti3hEILkzQbIWmRf3Zt2x1S7eRofdGCapiBZyTcY9uUrVOcfYXTyaBjzQPSUKUOUZ7u3qS0zDCNcgJIzplbHxQpLvfjtrtkaeXr6YuWL-msyWgcY7YQPV0mrp0mGJl1N7CZlfw9UBamW8WEH87CObEqC9Qy7N_l4Cd8A3NB7RKobkdK_Ov9lhmH4KqKpwocI-xVZM3PlrFNiZEJTTWu3YPqhrZyAwE0VPj_-AaEGjditPbs4Er7gl4YYutiqsQ623XPA8f5V3sAy"/>
+<div class="w-8 h-8 rounded-full border-2 border-card-dark bg-border-dark flex items-center justify-center text-[10px] text-white font-bold">
+                                    +84
+                                </div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative flex flex-col justify-between p-6 h-[280px] bg-card-dark rounded-3xl border border-border-dark hover:border-primary/50 hover:shadow-[0_0_20px_rgba(238,43,124,0.1)] transition-all cursor-pointer">
+<div class="absolute top-6 right-6">
+<span class="material-symbols-outlined text-primary fill-current transition-colors cursor-pointer">bookmark</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="bg-purple-500/10 text-purple-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Deep Talk</span>
+</div>
+<h3 class="text-white text-xl font-bold leading-relaxed pr-8">
+                                What is one behavior that you never tolerate in a relationship?
+                            </h3>
+</div>
+<div class="flex items-center justify-between mt-auto pt-6 border-t border-white/5">
+<div class="flex items-center gap-4 text-text-secondary">
+<button class="flex items-center gap-1.5 hover:text-white transition-colors group/btn">
+<span class="material-symbols-outlined text-[18px] text-primary fill-current">favorite</span>
+<span class="text-xs font-bold text-primary">4.1k</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span class="text-xs font-bold">342</span>
+</button>
+</div>
+<div class="flex -space-x-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border-2 border-card-dark object-cover" data-alt="Avatar of user 3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrsA7QEVdZ6PYmQGRhqEg7SVtfPY_grBcse7bDVS8Dk192ebZQfq5t-uDabVhs4hWIVoFIxQ3XA7XZUymRzmtQKa29sw9xPc-RzePRzxSxA8FT6rKfOwYG0YskhM8091_u3BFncApqUsC9M2mh9hsFtXKCxouIt66cgY9O6caihyXtXY6k8Li75jtr60KvuPRffOD8M_G4ARtuq1GDyalwrzZLakgYMtY3UGIlbvC3Xpj8dVR8PrYzsFLB8vS0yVqsOj2Gs9CsfNiF"/>
+<img alt="User avatar" class="w-8 h-8 rounded-full border-2 border-card-dark object-cover" data-alt="Avatar of user 4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW-LOE7jU2qG5pscftln8_KAPGxkDaol_xphiHKkq30uP3L9QVDQpZ_wUvc3v3C8eaZm7Epram-uKakl-ZnsbQJr-Q7N79aQFd36EffTKgjQXQrL5BQUgQXhJQbf1gkRKBE_iBOHIRmqV5PoYL6D34IfJNLVUz6u2ZYoijI-H6qdyPoGa9zmZ6DHn0Rz7v6KzJzJ__pl-e57lH-j1ZPsYS69w_4MiT31b179ymyN-eTRU1ZLNnvP29NApFcWHtdsJNAzSbIFQMdOxA"/>
+<div class="w-8 h-8 rounded-full border-2 border-card-dark bg-border-dark flex items-center justify-center text-[10px] text-white font-bold">
+                                    +12
+                                </div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative flex flex-col justify-between p-6 h-[280px] bg-card-dark rounded-3xl border border-border-dark hover:border-primary/50 hover:shadow-[0_0_20px_rgba(238,43,124,0.1)] transition-all cursor-pointer">
+<div class="absolute top-6 right-6">
+<span class="material-symbols-outlined text-text-secondary hover:text-primary transition-colors cursor-pointer">bookmark</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="bg-yellow-500/10 text-yellow-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Funny</span>
+</div>
+<h3 class="text-white text-xl font-bold leading-relaxed pr-8">
+                                If animals could talk, which would be the rudest?
+                            </h3>
+</div>
+<div class="flex items-center justify-between mt-auto pt-6 border-t border-white/5">
+<div class="flex items-center gap-4 text-text-secondary">
+<button class="flex items-center gap-1.5 hover:text-white transition-colors group/btn">
+<span class="material-symbols-outlined text-[18px] group-hover/btn:text-primary transition-colors">favorite</span>
+<span class="text-xs font-bold">892</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span class="text-xs font-bold">15</span>
+</button>
+</div>
+<div class="flex -space-x-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border-2 border-card-dark object-cover" data-alt="Avatar of user 5" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzwpUJIMdUV8OMMR_9YcEynZIeLEFRTTWLfjoXCT-UA0KrZrGP6DtlaW-umRzYJ7QtNrvdwTXxEeC4AzthzBM0JIeSg4eScgPKxdVD7FTS6j7YwM8nA1UBo6ASzsxTU_2wvLWxg_VVoV4WLutCydOtYskF7kxBTrYi0L97yO8Qco-DLMIzbVVG7-rTWiUNZSUXEgsn7WLOmCDqp2mQfpMWRzU8lAvlpYy0AiucLklIHPJzlOA5ea8MV4fjQkgnFPB6wNUz5lmQNBLQ"/>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group relative flex flex-col justify-between p-6 h-[280px] bg-card-dark rounded-3xl border border-border-dark hover:border-primary/50 hover:shadow-[0_0_20px_rgba(238,43,124,0.1)] transition-all cursor-pointer">
+<div class="absolute top-6 right-6">
+<span class="material-symbols-outlined text-text-secondary hover:text-primary transition-colors cursor-pointer">bookmark</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="bg-green-500/10 text-green-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Future Goals</span>
+</div>
+<h3 class="text-white text-xl font-bold leading-relaxed pr-8">
+                                Where do you see yourself living in 10 years, and what does your daily routine look like?
+                            </h3>
+</div>
+<div class="flex items-center justify-between mt-auto pt-6 border-t border-white/5">
+<div class="flex items-center gap-4 text-text-secondary">
+<button class="flex items-center gap-1.5 hover:text-white transition-colors group/btn">
+<span class="material-symbols-outlined text-[18px] group-hover/btn:text-primary transition-colors">favorite</span>
+<span class="text-xs font-bold">1.2k</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span class="text-xs font-bold">54</span>
+</button>
+</div>
+<div class="flex -space-x-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border-2 border-card-dark object-cover" data-alt="Avatar of user 6" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc5GBnkVE5FdMFfkmki0SC_C4IcEWBxdPTdZUyDHlM-0zt9_xU4_8mJIRD6ohmyrAQpTitbkEKwEX9TGJE9jIhxFvANhPTbk7H8njGATn7aLEcRD5gcSANxh-P0Jsygf8Ti3IjbuqDX8KvUgjPalQpM_dJ5hOKqw9PzQhsb97X7eutBW0Me_pwFKhMjdf_JcCrTNpFi6JZMkT8Ww4ttxVcf6Kjfm5GVA1shnHzDkesdC_DmaZCWY7bwmdI6po5EcZ7tGIbCI1uz1N-"/>
+<img alt="User avatar" class="w-8 h-8 rounded-full border-2 border-card-dark object-cover" data-alt="Avatar of user 7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBowrYZ7Wbju3Fbtf8Gd_rEAkFhkePCkGa8lYu3LbObnH62lE0Ccd1uLC-Y4vSF8rcWbv6yfObaF3SzLWs6y1f6UCGy53F9aUA4XDK8UTZmmLMC-mv4kANXccQomKipL-Tbrr106_pn_-mNI9asGZoe519b-tvWIRIP39m-QsNI_QpFcFAgI6Txves8pn_k_qyE3MO963SGNr9jYlAobJ95-kXkcr6d6TQrk70_Yp7Mqb_V624sq7YKVrsbJPgIAsnVUL5oCTl0uzQG"/>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group relative flex flex-col justify-between p-6 h-[280px] bg-card-dark rounded-3xl border border-border-dark hover:border-primary/50 hover:shadow-[0_0_20px_rgba(238,43,124,0.1)] transition-all cursor-pointer">
+<div class="absolute top-6 right-6">
+<span class="material-symbols-outlined text-text-secondary hover:text-primary transition-colors cursor-pointer">bookmark</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Spicy</span>
+</div>
+<h3 class="text-white text-xl font-bold leading-relaxed pr-8">
+                                What's the most unusual place you've ever had a romantic encounter?
+                            </h3>
+</div>
+<div class="flex items-center justify-between mt-auto pt-6 border-t border-white/5">
+<div class="flex items-center gap-4 text-text-secondary">
+<button class="flex items-center gap-1.5 hover:text-white transition-colors group/btn">
+<span class="material-symbols-outlined text-[18px] group-hover/btn:text-primary transition-colors">favorite</span>
+<span class="text-xs font-bold">5.8k</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span class="text-xs font-bold">203</span>
+</button>
+</div>
+<div class="flex -space-x-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border-2 border-card-dark object-cover" data-alt="Avatar of user 8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfkPcrqvfP0NQAI6A-cBuBmOg5OTDoberF9CFsYC2R0rWt-Izl-CQuM4lyhmzt0mN-LmQePy-ZZI5UbYdfZyHhsGZVkjjyrByfR-wlJs-2I-p0Qp6mxM26i2wJguXRnjtZb_cBHIxlvQv0XpzqkXpu0jxitWOFygvGqyvcS66b2jWR69kCGmXUG9p1_WrGZcRFFzX2wPH-beRCj9EQ76xiGFwKGsGqYbsQxfk6CfXuybqk939_sarzsQ5LHsfzGydkd-Nxfj9uKEfo"/>
+<div class="w-8 h-8 rounded-full border-2 border-card-dark bg-border-dark flex items-center justify-center text-[10px] text-white font-bold">
+                                    +105
+                                </div>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group relative flex flex-col justify-between p-6 h-[280px] bg-card-dark rounded-3xl border border-border-dark hover:border-primary/50 hover:shadow-[0_0_20px_rgba(238,43,124,0.1)] transition-all cursor-pointer">
+<div class="absolute top-6 right-6">
+<span class="material-symbols-outlined text-text-secondary hover:text-primary transition-colors cursor-pointer">bookmark</span>
+</div>
+<div>
+<div class="inline-flex items-center gap-2 mb-4">
+<span class="bg-orange-500/10 text-orange-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">Values</span>
+</div>
+<h3 class="text-white text-xl font-bold leading-relaxed pr-8">
+                                What is a belief you held strongly in the past that you have completely changed your mind about?
+                            </h3>
+</div>
+<div class="flex items-center justify-between mt-auto pt-6 border-t border-white/5">
+<div class="flex items-center gap-4 text-text-secondary">
+<button class="flex items-center gap-1.5 hover:text-white transition-colors group/btn">
+<span class="material-symbols-outlined text-[18px] group-hover/btn:text-primary transition-colors">favorite</span>
+<span class="text-xs font-bold">940</span>
+</button>
+<button class="flex items-center gap-1.5 hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+<span class="text-xs font-bold">41</span>
+</button>
+</div>
+<div class="flex -space-x-2">
+<img alt="User avatar" class="w-8 h-8 rounded-full border-2 border-card-dark object-cover" data-alt="Avatar of user 9" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoRR9K_h96BuG_95Zgln8SedxPYPJk5Yetdy-Htj3gCVKR3hAzRr5ROKpKdeCwdD5B-5uxIQOvX8ZcujmI4AAMNfVB7na94dSyWnX-qvRoFvYsCM_rsbVKpsEbLEWH2g1ekylGfEbsATPg84U3TlKjJC-PDygXoXY3maj4Sp-3SFAX7puuOBG2rN8-4jBVcgfWRcZOpNgdRc_EOjovkZZFzmIut-prYuCJA6_afxZgd2WRk90r0_pMXYD4z6JNoqIjIXEkCyvsqC5v"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination/Load More -->
+<div class="flex justify-center mt-10">
+<button class="flex items-center gap-2 px-8 h-12 rounded-full border border-border-dark bg-card-dark text-white font-bold hover:bg-border-dark transition-colors">
+                        Load More Questions
+                        <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+
+<!-- Simple Footer -->
+<footer class="border-t border-slate-200 bg-white py-10 px-10">
+<div class="max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3 text-white">
+<div class="size-6 text-primary">
+<svg class="size-full" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<span class="font-bold">Miray</span>
+</div>
+<div class="flex gap-6 text-text-secondary text-sm">
+<a class="hover:text-white transition-colors" href="#">About</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<p class="text-text-secondary text-sm">© 2023 Miray. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

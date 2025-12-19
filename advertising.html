@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advertising on Miray</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: false,
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2b8cee",
+            background: "#f6f7f8",
+            surface: "#ffffff",
+            border: "#e5e7eb",
+            muted: "#64748b"
+          },
+          fontFamily: {
+            display: ["Be Vietnam Pro", "sans-serif"]
+          },
+          borderRadius: {
+            DEFAULT: "1rem",
+            lg: "1.5rem",
+            xl: "2rem",
+            full: "9999px"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background text-slate-900 font-display overflow-x-hidden">
+<div class="flex min-h-screen flex-col">
+
+<!-- NAV -->
+<header class="sticky top-0 z-50 border-b border-border bg-white/90 backdrop-blur">
+  <div class="max-w-7xl mx-auto px-8 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-primary text-3xl">mark_chat_read</span>
+      <span class="font-bold text-lg">Miray</span>
+    </div>
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#" class="hover:text-primary">Platform</a>
+      <a href="#formats" class="hover:text-primary">Ad Formats</a>
+      <a href="#audience" class="hover:text-primary">Audience</a>
+      <a href="#contact" class="hover:text-primary">Contact</a>
+    </nav>
+    <button class="hidden md:flex h-9 px-6 rounded-full bg-primary text-white font-bold hover:bg-blue-600">
+      Partner Login
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+    <div>
+      <span class="inline-block mb-4 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase">
+        For Advertisers
+      </span>
+      <h1 class="text-4xl md:text-5xl font-black leading-tight mb-4">
+        Reach Hearts & Minds.<br/>
+        <span class="text-primary">Advertise on Miray.</span>
+      </h1>
+      <p class="text-muted text-lg max-w-xl mb-8">
+        Connect with a highly engaged audience on the fastest-growing Q&A dating platform.
+      </p>
+      <div class="flex gap-4 flex-wrap">
+        <button class="h-12 px-8 rounded-full bg-primary text-white font-bold hover:bg-blue-600">
+          Start Advertising
+        </button>
+        <button class="h-12 px-8 rounded-full border border-border hover:bg-slate-100 font-bold">
+          Download Media Kit
+        </button>
+      </div>
+    </div>
+
+    <div class="rounded-xl overflow-hidden aspect-square bg-cover bg-center shadow-lg"
+      style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuARx1Xm-EcZs4wvnwTLMkF_Osh_MuRqAwP745cvnhHnGZC5roOqMDuVqRTy38CUZIQpZnjmWOOQODhuo5bUhxL5gkjxK8Tm9s6bxIUHC427i6JGzE6zpIuyQEjUbJts_DVvPbs6zFk-YVK8_9mmIpjmylOanvlU38-ULtsX5_bpoEorxVQ2tvMGMQ7QSZcb5RPt-rD0td83LOi4X2do6-o4Ymny9MrzNQx5zhs1_TDydlaMaZig82j07LVZG0Bd00omUoSD_FFiF7oi');">
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="py-12 bg-white border-y border-border">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-6">
+    <div class="p-6 rounded-xl border border-border">
+      <p class="text-muted text-sm">Monthly Active Users</p>
+      <p class="text-3xl font-bold">2.5M+</p>
+    </div>
+    <div class="p-6 rounded-xl border border-border">
+      <p class="text-muted text-sm">Avg Session</p>
+      <p class="text-3xl font-bold">18 min</p>
+    </div>
+    <div class="p-6 rounded-xl border border-border">
+      <p class="text-muted text-sm">Gen Z</p>
+      <p class="text-3xl font-bold">65%</p>
+    </div>
+    <div class="p-6 rounded-xl border border-border">
+      <p class="text-muted text-sm">Daily Answers</p>
+      <p class="text-3xl font-bold">850K</p>
+    </div>
+  </div>
+</section>
+
+<!-- FORMATS -->
+<section id="formats" class="py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-3xl md:text-4xl font-black text-center mb-4">
+      Ad Experiences that Convert
+    </h2>
+    <p class="text-muted text-center max-w-2xl mx-auto mb-12">
+      Native, immersive formats that feel like part of the experience.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="border border-border rounded-xl p-6 hover:border-primary transition">
+        <h3 class="font-bold text-xl mb-2">Sponsored Questions</h3>
+        <p class="text-muted text-sm">Brand-sponsored daily questions.</p>
+      </div>
+      <div class="border border-border rounded-xl p-6 hover:border-primary transition">
+        <h3 class="font-bold text-xl mb-2">Native Video</h3>
+        <p class="text-muted text-sm">Full-screen vertical storytelling.</p>
+      </div>
+      <div class="border border-border rounded-xl p-6 hover:border-primary transition">
+        <h3 class="font-bold text-xl mb-2">Discovery Banners</h3>
+        <p class="text-muted text-sm">High-visibility placements.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 bg-white border-t border-border">
+  <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+    <div>
+      <h2 class="text-3xl font-bold mb-4">Ready to Connect?</h2>
+      <p class="text-muted mb-6">ads@miray.com</p>
+    </div>
+
+    <form class="space-y-4">
+      <input class="w-full h-12 border border-border rounded-xl px-4" placeholder="Work Email"/>
+      <input class="w-full h-12 border border-border rounded-xl px-4" placeholder="Company"/>
+      <textarea class="w-full h-32 border border-border rounded-xl px-4 py-3" placeholder="Message"></textarea>
+      <button class="w-full h-12 rounded-full bg-primary text-white font-bold hover:bg-blue-600">
+        Submit Inquiry
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-border py-8 bg-white">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between text-sm text-muted">
+    <span>© 2024 Miray Inc.</span>
+    <div class="flex gap-6">
+      <a href="#" class="hover:text-primary">Privacy</a>
+      <a href="#" class="hover:text-primary">Terms</a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>

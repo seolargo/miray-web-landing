@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Miray – Investor Relations</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
+
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      darkMode: false,
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2b8cee",
+            "background-light": "#f6f7f8",
+            "card": "#ffffff",
+            "border": "#e5e7eb",
+            "text-muted": "#64748b"
+          },
+          fontFamily: {
+            display: ["Manrope", "sans-serif"]
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+            lg: "0.75rem",
+            xl: "1rem",
+            full: "9999px"
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="bg-background-light text-slate-900 font-display overflow-x-hidden">
+<div class="flex flex-col min-h-screen">
+
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-10 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <span class="material-symbols-outlined text-primary text-3xl">mark_chat_read</span>
+      <h2 class="text-lg font-bold tracking-tight">Miray IR</h2>
+    </div>
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="#overview" class="hover:text-primary">Overview</a>
+      <a href="#financials" class="hover:text-primary">Financials</a>
+      <a href="#governance" class="hover:text-primary">Governance</a>
+      <a href="#press" class="hover:text-primary">Press</a>
+      <a href="#contact" class="hover:text-primary">Contact</a>
+    </nav>
+    <button class="hidden sm:flex h-9 px-4 items-center justify-center rounded-lg bg-primary text-white text-sm font-bold hover:bg-blue-600 transition">
+      <span class="material-symbols-outlined text-[18px] mr-2">lock</span>
+      Shareholder Login
+    </button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section id="overview">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-10 py-10">
+    <div class="rounded-xl overflow-hidden min-h-[480px] flex items-end p-10 bg-cover bg-center"
+      style="background-image:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.65)),url('https://lh3.googleusercontent.com/aida-public/AB6AXuCTdTF9zshp0Cv8EcqJi1_756OMMMIb0jyu5DZ7MKvtGFGW0Dnztu3QsBW0m5W8goMYSoBZRuPLyr8Yk3y955dkctW09p7GbesonW7tp4JIq_k3UWOdONOIapyZQZ0Lpq5E0wkwz1M3g2uS3g_4LrdbM3AgbuquCre6eprsiSE0BC7Q5gV5ZriT7tcw7omT8ohTWcOoGbAfsYi5X16wsNX_YUqACRE0ysJTPaep9L17q7UkBzA2WGEt32XLlzBzuUsNUH7Fgf9nDU-a');">
+      <div class="max-w-2xl text-white">
+        <span class="inline-block mb-4 px-3 py-1 rounded-full bg-primary/30 text-xs font-bold uppercase">
+          Investor Relations
+        </span>
+        <h1 class="text-4xl md:text-5xl font-black mb-4">
+          Investing in the Future of Connection
+        </h1>
+        <p class="text-slate-200 mb-8">
+          Miray is redefining how people connect through meaningful questions and data-driven insights.
+        </p>
+        <div class="flex gap-4 flex-wrap">
+          <button class="h-12 px-6 rounded-lg bg-primary text-white font-bold hover:bg-blue-600 transition">
+            Download Investor Deck
+          </button>
+          <button class="h-12 px-6 rounded-lg border border-white/30 text-white hover:bg-white/10 transition">
+            Watch Intro Video
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="py-10">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div class="p-6 rounded-lg bg-white border border-border">
+      <p class="text-text-muted text-sm">Active Users</p>
+      <p class="text-3xl font-bold">1.2M</p>
+    </div>
+    <div class="p-6 rounded-lg bg-white border border-border">
+      <p class="text-text-muted text-sm">Revenue Growth</p>
+      <p class="text-3xl font-bold">+24%</p>
+    </div>
+    <div class="p-6 rounded-lg bg-white border border-border">
+      <p class="text-text-muted text-sm">Q&A Engagement</p>
+      <p class="text-3xl font-bold">85%</p>
+    </div>
+    <div class="p-6 rounded-lg bg-white border border-border">
+      <p class="text-text-muted text-sm">Market Share</p>
+      <p class="text-3xl font-bold">15%</p>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<div class="max-w-[1280px] mx-auto px-4 sm:px-10 py-16 grid grid-cols-1 lg:grid-cols-12 gap-10">
+
+  <!-- Left -->
+  <div class="lg:col-span-8 space-y-16">
+
+    <section id="financials">
+      <h2 class="text-2xl font-bold mb-6">Financial Reports</h2>
+      <div class="bg-white border border-border rounded-lg divide-y">
+        <div class="p-5 flex justify-between">
+          <div>
+            <h4 class="font-bold">Q3 2023 Earnings Release</h4>
+            <p class="text-text-muted text-sm">Oct 24, 2023</p>
+          </div>
+          <button class="text-primary font-bold">Download</button>
+        </div>
+        <div class="p-5 flex justify-between">
+          <div>
+            <h4 class="font-bold">Fiscal Year 2022 Annual Report</h4>
+            <p class="text-text-muted text-sm">Mar 15, 2023</p>
+          </div>
+          <button class="text-primary font-bold">Download</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="press">
+      <h2 class="text-2xl font-bold mb-6">Latest Press</h2>
+      <div class="space-y-4">
+        <div class="p-6 bg-white border border-border rounded-lg">
+          <h3 class="font-bold text-lg">Miray Reaches 1M DAU</h3>
+          <p class="text-text-muted text-sm">October 12, 2023</p>
+        </div>
+        <div class="p-6 bg-white border border-border rounded-lg">
+          <h3 class="font-bold text-lg">Introducing Miray Deep Dive</h3>
+          <p class="text-text-muted text-sm">September 05, 2023</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="governance">
+      <h2 class="text-2xl font-bold mb-6">Corporate Governance</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="p-6 bg-white border border-border rounded-lg">Elena Rostova – CEO</div>
+        <div class="p-6 bg-white border border-border rounded-lg">David Chen – CFO</div>
+        <div class="p-6 bg-white border border-border rounded-lg">Sarah Jenkins – Board</div>
+        <div class="p-6 bg-white border border-border rounded-lg">Marcus Thorne – CTO</div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Right -->
+  <aside class="lg:col-span-4 space-y-8" id="contact">
+    <div class="bg-white border border-border rounded-lg p-6 sticky top-24">
+      <h3 class="font-bold text-lg mb-4">Investor Inquiries</h3>
+      <p class="text-text-muted text-sm mb-4">investors@miray.app</p>
+      <form class="space-y-3">
+        <input class="w-full h-10 px-3 rounded border border-border" placeholder="Email"/>
+        <textarea class="w-full p-3 rounded border border-border" rows="3" placeholder="Message"></textarea>
+        <button class="w-full h-10 bg-primary text-white rounded font-bold">Send</button>
+      </form>
+    </div>
+  </aside>
+
+</div>
+
+<!-- Footer -->
+<footer class="border-t border-border bg-white py-10">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-10 text-sm text-text-muted flex justify-between">
+    <span>© 2023 Miray Inc.</span>
+    <span>Investor information only</span>
+  </div>
+</footer>
+
+</div>
+</body>
+</html>
