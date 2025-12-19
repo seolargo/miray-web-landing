@@ -1,154 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us – Miray</title>
+    <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Contact Us – Miray</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet"/>
 
-  <!-- Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 
-  <!-- Tailwind -->
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-  <!-- Tailwind Config -->
-  <script>
-    tailwind.config = {
-      darkMode: false,
-      theme: {
-        extend: {
-          colors: {
-            primary: "#2b8cee",
-            "background-light": "#f6f7f8",
-            "card": "#ffffff",
-            "border": "#e5e7eb",
-            "text-muted": "#64748b"
-          },
-          fontFamily: {
-            display: ["Manrope", "sans-serif"]
-          },
-          borderRadius: {
-            DEFAULT: "0.75rem",
-            lg: "1rem",
-            xl: "1.25rem",
-            full: "9999px"
-          }
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+        darkMode: false,
+        theme: {
+            extend: {
+            colors: {
+                primary: "#2b8cee",
+                "background-light": "#f6f7f8",
+                "card": "#ffffff",
+                "border": "#e5e7eb",
+                "text-muted": "#64748b"
+            },
+            fontFamily: {
+                display: ["Manrope", "sans-serif"]
+            },
+            borderRadius: {
+                DEFAULT: "0.75rem",
+                lg: "1rem",
+                xl: "1.25rem",
+                full: "9999px"
+            }
+            }
         }
-      }
-    }
-  </script>
-</head>
+        }
+    </script>
+    </head>
 
-<body class="bg-background-light text-[#0d141b] font-display min-h-screen flex flex-col">
-
-<!-- Header -->
-<header class="flex items-center justify-between border-b border-border px-6 lg:px-40 py-3 bg-white sticky top-0 z-50">
-  <div class="flex items-center gap-3">
-    <span class="material-symbols-outlined text-primary text-2xl">favorite</span>
-    <span class="font-bold text-lg">Miray</span>
-  </div>
-  <nav class="hidden lg:flex gap-8 text-sm font-medium">
-    <a href="index.html" class="hover:text-primary">Home</a>
-    <a href="#" class="hover:text-primary">About</a>
-    <a href="contact.html" class="text-primary font-bold">Contact</a>
-  </nav>
-</header>
-
-<!-- Main -->
-<main class="flex-1 px-4 md:px-10 lg:px-40 py-12">
-  <div class="max-w-[1200px] mx-auto flex flex-col gap-12">
-
-    <!-- Hero -->
-    <div class="max-w-[960px]">
-      <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
-        Got Questions? <span class="text-primary">Ask Miray.</span>
-      </h1>
-      <p class="text-text-muted text-lg max-w-2xl">
-        Whether you found a bug, have feedback, or just want to say hi —
-        we’re happy to hear from you.
-      </p>
-    </div>
-
-    <div class="flex flex-col lg:flex-row gap-10">
-
-      <!-- Form -->
-      <div class="flex-1 bg-card border border-border rounded-xl p-8">
-        <h2 class="text-2xl font-bold mb-2">Send us a message</h2>
-        <p class="text-text-muted text-sm mb-6">We usually reply within 24 hours.</p>
-
-        <form class="flex flex-col gap-4">
-          <div class="flex flex-col md:flex-row gap-4">
-            <input class="h-14 rounded-full px-6 border border-border bg-white" placeholder="Your name"/>
-            <input class="h-14 rounded-full px-6 border border-border bg-white" placeholder="Email address"/>
-          </div>
-
-          <select class="h-14 rounded-full px-6 border border-border bg-white">
-            <option selected disabled>What’s this about?</option>
-            <option>Bug report</option>
-            <option>Feedback</option>
-            <option>Account issue</option>
-            <option>Partnership</option>
-          </select>
-
-          <textarea class="min-h-[160px] rounded-xl px-6 py-4 border border-border bg-white" placeholder="Tell us more…"></textarea>
-
-          <button class="self-start h-12 px-8 rounded-full bg-primary text-white font-bold hover:bg-blue-600 transition">
-            Send Message
-          </button>
-        </form>
-      </div>
-
-      <!-- Info -->
-      <div class="w-full lg:w-[380px] flex flex-col gap-6">
-
-        <div class="bg-white border border-border rounded-xl p-6">
-          <h3 class="font-bold text-lg mb-4">Contact Information</h3>
-
-          <div class="flex flex-col gap-4 text-sm">
-            <div>
-              <span class="text-text-muted">Email</span><br/>
-              <span class="font-medium">support@miray.com</span>
+    <body class="bg-background-light text-[#0d141b] font-display min-h-screen flex flex-col">
+        <header class="flex items-center justify-between border-b border-border px-6 lg:px-40 py-3 bg-white sticky top-0 z-50">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary text-2xl">favorite</span>
+                <span class="font-bold text-lg">Miray</span>
             </div>
-            <div>
-              <span class="text-text-muted">Phone</span><br/>
-              <span class="font-medium">+1 (555) 012-3456</span>
+
+            <nav class="hidden lg:flex gap-8 text-sm font-medium">
+                <a href="index.html"                class="hover:text-primary">Home</a>
+                <a href="advertising.html"          class="hover:text-primary">Advertising</a>
+                <a href="browse.html"               class="hover:text-primary">Browse</a>
+                <a href="contact.html"              class="text-primary font-bold">Contact</a>
+                <a href="investor-relations.html"   class="hover:text-primary">Investor Relations</a>                
+            </nav>
+        </header>
+
+        <main class="flex-1 px-4 md:px-10 lg:px-40 py-12">
+            <div class="max-w-[1200px] mx-auto flex flex-col gap-12">
+                <div class="max-w-[960px]">
+                    <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+                        Got Questions? <span class="text-primary">Ask Miray.</span>
+                    </h1>
+
+                    <p class="text-text-muted text-lg max-w-2xl">
+                        Whether you found a bug, have feedback, or just want to say hi —
+                        we’re happy to hear from you.
+                    </p>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-10">
+                    <div class="w-full lg:w-[380px] flex flex-col gap-6">
+                        <div class="bg-white border border-border rounded-xl p-6">
+                            <h3 class="font-bold text-lg mb-4">Contact Information</h3>
+
+                            <div class="flex flex-col gap-4 text-sm">
+                                <div>
+                                    <span class="text-text-muted">Email</span><br/>
+                                    <span class="font-medium">mail.omerfaruk@gmail.com</span>
+                                </div>
+                                
+                                <div>
+                                    <span class="text-text-muted">Phone</span><br/>
+                                    <span class="font-medium">+90 (534) 6963285</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
+        </main>
 
-        <div class="bg-white border border-border rounded-xl p-6">
-          <h3 class="font-bold text-lg mb-4">FAQ</h3>
-
-          <details class="mb-3">
-            <summary class="font-medium cursor-pointer">Is Miray free?</summary>
-            <p class="text-sm text-text-muted mt-2">
-              Yes. Miray is free to use, with optional premium features.
-            </p>
-          </details>
-
-          <details class="mb-3">
-            <summary class="font-medium cursor-pointer">How do I report a user?</summary>
-            <p class="text-sm text-text-muted mt-2">
-              From the user profile, tap “Report” and follow the steps.
-            </p>
-          </details>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</main>
-
-<!-- Footer -->
-<footer class="border-t border-border bg-white py-8 text-center text-sm text-text-muted">
-  © 2024 Miray. All rights reserved.
-</footer>
-
-</body>
+        <footer class="border-t border-border bg-white py-8 text-center text-sm text-text-muted">
+            © 2026 Miray. All rights reserved.
+        </footer>
+    </body>
 </html>
