@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html class="light" lang="en">
-
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Miray: First Date Questions & Date Ideas</title>
+  <title>Miray – Better Dates Start With Better Questions</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -19,30 +18,24 @@
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
-  <!-- Tailwind Config -->
   <script>
     tailwind.config = {
-      darkMode: false,
       theme: {
         extend: {
           colors: {
             primary: "#f04299",
-            "background-light": "#fdf2f8",
-            "card": "#ffffff",
-            "border": "#fbcfe8",
-            "text-muted": "#9d174d"
+            soft: "#fdf2f8",
+            border: "#fbcfe8",
+            muted: "#6b7280"
           },
           fontFamily: {
             display: ["Manrope", "sans-serif"]
           },
           boxShadow: {
-            pinkGlow: "0 20px 40px rgba(240,66,153,0.25)"
+            glow: "0 20px 40px rgba(240,66,153,0.25)"
           },
           borderRadius: {
-            DEFAULT: "0.75rem",
-            lg: "1rem",
-            xl: "1.25rem",
-            full: "9999px"
+            xl: "1.25rem"
           }
         }
       }
@@ -50,53 +43,202 @@
   </script>
 </head>
 
-<body class="bg-background-light text-[#0d141b] font-display overflow-x-hidden">
-<div class="relative flex min-h-screen w-full flex-col">
+<body class="bg-soft text-[#0d141b] font-display">
+<div class="min-h-screen flex flex-col">
 
-<!-- Top Navigation -->
-<header class="sticky top-0 z-50 bg-white border-b border-border shadow-sm">
-  <div class="max-w-[960px] mx-auto px-4 py-3 flex justify-between items-center">
+<!-- NAV -->
+<header class="sticky top-0 z-50 bg-white border-b border-border">
+  <div class="max-w-[960px] mx-auto px-4 py-4 flex justify-between items-center">
     <div class="flex items-center gap-3">
       <span class="material-symbols-outlined text-primary text-2xl">favorite</span>
-      <span class="font-bold text-lg">Miray</span>
+      <span class="font-extrabold text-lg">Miray</span>
     </div>
-    <nav class="hidden lg:flex gap-8 text-sm font-medium">
-      <a href="index.html" class="text-primary font-bold">Home</a>
-      <a href="advertising.html" class="hover:text-primary">Advertising</a>
-      <a href="browse.html" class="hover:text-primary">Browse</a>
-      <a href="contact.html" class="hover:text-primary">Contact</a>
+    <nav class="hidden md:flex gap-8 text-sm font-medium">
+      <a href="#" class="text-primary font-bold">Home</a>
+      <a href="#" class="hover:text-primary">Browse</a>
+      <a href="#" class="hover:text-primary">Advertising</a>
+      <a href="#" class="hover:text-primary">Contact</a>
     </nav>
   </div>
 </header>
 
-<!-- Hero -->
-<section class="max-w-[960px] mx-auto px-4 py-20 flex flex-col md:flex-row items-center gap-12">
-  <div class="flex-1 flex flex-col gap-6">
+<!-- HERO -->
+<section class="max-w-[960px] mx-auto px-4 py-24 grid md:grid-cols-2 gap-14 items-center">
+  <div class="flex flex-col gap-6">
     <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-      Ask Better Questions.<br/>
-      <span class="text-primary">Have Better Dates.</span>
+      Better Questions.<br/>
+      <span class="text-primary">Better Dates.</span>
     </h1>
-    <p class="text-slate-600 text-lg">
-      Miray helps you skip the small talk and create real connection with meaningful questions.
+    <p class="text-lg text-muted">
+      Miray helps you break the ice, skip awkward silence, and build real emotional connection — whether it’s a first date or a long-term relationship.
     </p>
   </div>
 
-    <div class="flex-1 max-w-[420px] aspect-[4/5] rounded-2xl overflow-hidden shadow-pinkGlow">
-        <img
-            src="https://images.pexels.com/photos/4691222/pexels-photo-4691222.jpeg"
-            alt="Couple talking"
-            class="w-full h-full object-cover"
-        />
-    </div>
+  <div class="rounded-xl overflow-hidden shadow-glow aspect-[4/5]">
+    <img
+      src="https://images.pexels.com/photos/4691222/pexels-photo-4691222.jpeg"
+      class="w-full h-full object-cover"
+      alt="Couple talking"
+    />
+  </div>
 </section>
 
-<!-- CTA -->
-<section class="bg-primary py-20 text-center text-white">
-  <h2 class="text-3xl md:text-5xl font-extrabold mb-4">
-    Ready to find your spark?
+<!-- 🔥 EXTRA MAGIC EUROPE SECTION #1 -->
+<section class="max-w-[1100px] mx-auto px-4 pb-24">
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="rounded-xl overflow-hidden shadow-glow bg-white">
+      <img 
+        src="https://images.pexels.com/photos/532826/pexels-photo-532826.jpeg"
+        class="h-[220px] w-full object-cover"
+      />
+      
+      <div class="p-4">
+        <h4 class="font-bold mb-1">Paris Evenings</h4>
+        <p class="text-sm text-muted">Where conversations slow down and feelings surface.</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl overflow-hidden shadow-glow bg-white translate-y-6">
+      <img src="https://images.pexels.com/photos/7473036/pexels-photo-7473036.jpeg"
+           class="h-[220px] w-full object-cover"/>
+      <div class="p-4">
+        <h4 class="font-bold mb-1">Rome Walks</h4>
+        <p class="text-sm text-muted">Side by side, words feel easier.</p>
+      </div>
+    </div>
+
+    <div class="rounded-xl overflow-hidden shadow-glow bg-white">
+      <img src="https://images.pexels.com/photos/29574919/pexels-photo-29574919.jpeg"
+           class="h-[220px] w-full object-cover"/>
+      <div class="p-4">
+        <h4 class="font-bold mb-1">Old Streets</h4>
+        <p class="text-sm text-muted">Every question opens a memory.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="bg-primary text-white py-20">
+  <div class="max-w-[960px] mx-auto px-4 grid md:grid-cols-3 gap-10 text-center">
+    <div class="flex flex-col items-center gap-4">
+      <span class="material-symbols-outlined text-4xl">forum</span>
+      <h3 class="font-bold text-xl">Meaningful Questions</h3>
+      <p class="text-pink-100">
+        Thought-provoking prompts designed to create real conversations — not small talk.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center gap-4">
+      <span class="material-symbols-outlined text-4xl">favorite</span>
+      <h3 class="font-bold text-xl">Emotional Connection</h3>
+      <p class="text-pink-100">
+        Build trust, curiosity, and intimacy naturally through guided conversation.
+      </p>
+    </div>
+
+    <div class="flex flex-col items-center gap-4">
+      <span class="material-symbols-outlined text-4xl">auto_awesome</span>
+      <h3 class="font-bold text-xl">Always The Right Moment</h3>
+      <p class="text-pink-100">
+        Questions that fit the mood — playful, deep, romantic, or reflective.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="max-w-[960px] mx-auto px-4 py-24">
+  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-14">
+    How Miray Works
   </h2>
-  <p class="text-pink-100 mb-8">
-    Download Miray and start better conversations today.
+
+  <div class="grid md:grid-cols-3 gap-12 text-center">
+    <div>
+      <div class="text-primary text-4xl font-extrabold mb-4">1</div>
+      <h4 class="font-bold mb-2">Choose a Category</h4>
+      <p class="text-muted">
+        First date, deep talk, playful mood, or relationship-building.
+      </p>
+    </div>
+
+    <div>
+      <div class="text-primary text-4xl font-extrabold mb-4">2</div>
+      <h4 class="font-bold mb-2">Ask & Listen</h4>
+      <p class="text-muted">
+        Let the question open the door — the conversation flows naturally.
+      </p>
+    </div>
+
+    <div>
+      <div class="text-primary text-4xl font-extrabold mb-4">3</div>
+      <h4 class="font-bold mb-2">Create Connection</h4>
+      <p class="text-muted">
+        Shared stories turn into chemistry and meaningful moments.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- 🔥 EXTRA MAGIC EUROPE SECTION #2 -->
+<section class="max-w-[1100px] mx-auto px-4 pb-24">
+  <div class="grid md:grid-cols-2 gap-8 items-center">
+    <div class="rounded-xl overflow-hidden shadow-glow">
+      <img src="https://images.pexels.com/photos/9736121/pexels-photo-9736121.jpeg"
+           class="h-[720px] w-full object-cover"/>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <h3 class="text-2xl font-extrabold">
+        Every city has a rhythm.<br/>
+        <span class="text-primary">So does every connection.</span>
+      </h3>
+      <p class="text-muted">
+        Miray adapts to your moment — playful, curious, deep or romantic.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF -->
+<section class="bg-white py-24 border-t border-border">
+  <div class="max-w-[960px] mx-auto px-4">
+    <h2 class="text-3xl font-extrabold text-center mb-14">
+      What Users Say
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-soft p-6 rounded-xl">
+        <p class="italic mb-4">
+          “Miray completely changed how my dates feel. No awkward silence anymore.”
+        </p>
+        <div class="font-bold">— Alex</div>
+      </div>
+
+      <div class="bg-soft p-6 rounded-xl">
+        <p class="italic mb-4">
+          “It feels natural, not like a game. Conversations go deeper effortlessly.”
+        </p>
+        <div class="font-bold">— Sophie</div>
+      </div>
+
+      <div class="bg-soft p-6 rounded-xl">
+        <p class="italic mb-4">
+          “Perfect even for long-term relationships. We rediscovered each other.”
+        </p>
+        <div class="font-bold">— Daniel</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="bg-primary py-24 text-center text-white">
+  <h2 class="text-3xl md:text-5xl font-extrabold mb-6">
+    Ready for Better Dates?
+  </h2>
+  <p class="text-pink-100 mb-10">
+    Download Miray and start conversations that actually matter.
   </p>
 
   <div class="flex justify-center gap-6 flex-wrap">
@@ -106,18 +248,11 @@
         class="h-14"
       />
     </a>
-
-    <a href="https://apps.apple.com/app/id000000000" target="_blank">
-      <img
-        src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-        class="h-14"
-      />
-    </a>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-white border-t border-border py-10 text-center text-sm text-slate-400">
+<!-- FOOTER -->
+<footer class="bg-white border-t border-border py-10 text-center text-sm text-muted">
   © 2026 Miray. All rights reserved.
 </footer>
 
