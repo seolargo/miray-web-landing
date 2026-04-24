@@ -13,6 +13,8 @@
   <!-- Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 
+  <link rel="icon" href="/public/favicon.ico"/>
+
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
@@ -50,16 +52,17 @@
 <!-- Navigation -->
 <header class="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur">
   <div class="max-w-[1280px] mx-auto px-4 sm:px-10 h-16 flex items-center justify-between">
-    <div class="flex items-center gap-3">
+    <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
       <span class="material-symbols-outlined text-primary text-3xl">mark_chat_read</span>
       <h2 class="text-lg font-bold tracking-tight">Miray IR</h2>
-    </div>
+    </a>
     <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
       <a href="#overview" class="hover:text-primary">Overview</a>
       <a href="#financials" class="hover:text-primary">Financials</a>
       <a href="#governance" class="hover:text-primary">Governance</a>
       <a href="#press" class="hover:text-primary">Press</a>
       <a href="#contact" class="hover:text-primary">Contact</a>
+      <a href="index.html" class="hover:text-primary">Main Site</a>
     </nav>
     <button class="hidden sm:flex h-9 px-4 items-center justify-center rounded-lg bg-primary text-white text-sm font-bold hover:bg-blue-600 transition">
       <span class="material-symbols-outlined text-[18px] mr-2">lock</span>
@@ -175,10 +178,18 @@
     <div class="bg-white border border-border rounded-lg p-6 sticky top-24">
       <h3 class="font-bold text-lg mb-4">Investor Inquiries</h3>
       <p class="text-text-muted text-sm mb-4">investors@miray.app</p>
-      <form class="space-y-3">
-        <input class="w-full h-10 px-3 rounded border border-border" placeholder="Email"/>
-        <textarea class="w-full p-3 rounded border border-border" rows="3" placeholder="Message"></textarea>
-        <button class="w-full h-10 bg-primary text-white rounded font-bold">Send</button>
+      <form class="space-y-3" action="mailto:investors@miray.app" method="post" enctype="text/plain">
+        <label class="block">
+          <span class="sr-only">Email</span>
+          <input type="email" name="email" required autocomplete="email"
+                 class="w-full h-10 px-3 rounded border border-border" placeholder="Email"/>
+        </label>
+        <label class="block">
+          <span class="sr-only">Message</span>
+          <textarea name="message" required rows="3"
+                    class="w-full p-3 rounded border border-border" placeholder="Message"></textarea>
+        </label>
+        <button type="submit" class="w-full h-10 bg-primary text-white rounded font-bold">Send</button>
       </form>
     </div>
   </aside>
@@ -188,7 +199,7 @@
 <!-- Footer -->
 <footer class="border-t border-border bg-white py-10">
   <div class="max-w-[1280px] mx-auto px-4 sm:px-10 text-sm text-text-muted flex justify-between">
-    <span>© 2023 Miray Inc.</span>
+    <span>© 2026 Miray Inc.</span>
     <span>Investor information only</span>
   </div>
 </footer>
