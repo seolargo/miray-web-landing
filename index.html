@@ -28,10 +28,11 @@
 
   <style>
     :root {
-      --primary-color: #f04299;
-      --brand-color: #f04299;
-      --accent-color: #fdf2f8;
-      --theme-color: #f04299;
+      --primary-color:   #f04299;
+      --secondary-color: #fdf2f8;
+      --accent-color:    #fbcfe8;
+      --text-color:      #0d141b;
+      --muted-color:     #6b7280;
     }
   </style>
 
@@ -43,7 +44,13 @@
     "url": "https://mirayapp.com/",
     "logo": "https://mirayapp.com/public/logo.svg",
     "email": "mail.omerfaruk@gmail.com",
-    "telephone": "+905346963285"
+    "telephone": "+905346963285",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "mail.omerfaruk@gmail.com",
+      "telephone": "+905346963285",
+      "contactType": "customer support"
+    }
   }
   </script>
 
@@ -78,7 +85,14 @@
 <body class="bg-soft text-[#0d141b] font-display" data-page="home">
 <div class="min-h-screen flex flex-col">
 
-<header id="site-header"></header>
+<header id="site-header">
+  <div class="max-w-[960px] mx-auto px-6 py-5 flex items-center gap-2">
+    <a href="/" class="flex items-center gap-2">
+      <img src="/public/logo.svg" alt="Miray logo" class="logo" width="28" height="28"/>
+      <span class="font-bold">Miray</span>
+    </a>
+  </div>
+</header>
 
 <!-- HERO -->
 <section class="max-w-[960px] mx-auto px-4 py-24 grid md:grid-cols-2 gap-14 items-center">
