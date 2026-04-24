@@ -6,6 +6,9 @@
   let translations = null;
   let currentLang = null;
 
+  const textOriginals = new WeakMap();
+  const attrOriginals = new WeakMap();
+
   const getInitialLang = () => {
     const stored = localStorage.getItem(LANG_KEY);
     if (SUPPORTED.includes(stored)) return stored;
@@ -20,20 +23,19 @@
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.dataset.i18n;
-      const original = el.dataset.i18nOriginal ?? el.textContent;
-      if (!el.dataset.i18nOriginal) el.dataset.i18nOriginal = original;
+      if (!textOriginals.has(el)) textOriginals.set(el, el.textContent);
+      const original = textOriginals.get(el);
       el.textContent = dict && dict[key] !== undefined ? dict[key] : original;
     });
 
     document.querySelectorAll('[data-i18n-attr]').forEach(el => {
-      const pairs = el.dataset.i18nAttr.split(',');
-      pairs.forEach(pair => {
+      let bag = attrOriginals.get(el);
+      if (!bag) { bag = {}; attrOriginals.set(el, bag); }
+      el.dataset.i18nAttr.split(',').forEach(pair => {
         const [attr, key] = pair.split(':').map(s => s.trim());
         if (!attr || !key) return;
-        const storeKey = 'i18nOrigAttr_' + attr;
-        const original = el.dataset[storeKey] ?? el.getAttribute(attr) ?? '';
-        if (!el.dataset[storeKey]) el.dataset[storeKey] = original;
-        el.setAttribute(attr, dict && dict[key] !== undefined ? dict[key] : original);
+        if (bag[attr] === undefined) bag[attr] = el.getAttribute(attr) ?? '';
+        el.setAttribute(attr, dict && dict[key] !== undefined ? dict[key] : bag[attr]);
       });
     });
 
@@ -48,18 +50,21 @@
       sel.addEventListener('change', () => {
         const lang = sel.value;
         localStorage.setItem(LANG_KEY, lang);
+        console.info('[i18n] switching to', lang);
         apply(lang);
       });
+      console.info('[i18n] dropdown wired');
     });
   };
 
   const boot = async () => {
     currentLang = getInitialLang();
     try {
-      const res = await fetch('/i18n/translations.json');
+      const res = await fetch('/i18n/translations.json?v=3', { cache: 'no-cache' });
       translations = await res.json();
+      console.info('[i18n] loaded. initial lang:', currentLang, 'tr keys:', Object.keys(translations.tr || {}).length);
     } catch (err) {
-      console.error('i18n load failed:', err);
+      console.error('[i18n] translations load failed:', err);
       translations = {};
     }
     apply(currentLang);
