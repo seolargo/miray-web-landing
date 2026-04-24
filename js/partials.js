@@ -27,4 +27,6 @@
       a.classList.add('text-primary', 'font-bold');
     });
   }
+
+  document.dispatchEvent(new CustomEvent('partials:loaded'));
 })();

@@ -10,11 +10,17 @@
       <a href="#governance" class="hover:text-primary">Governance</a>
       <a href="#press" class="hover:text-primary">Press</a>
       <a href="#contact" class="hover:text-primary">Contact</a>
-      <a href="index.html" class="hover:text-primary">Main Site</a>
+      <a href="index.html" data-i18n="nav.mainsite" class="hover:text-primary">Main Site</a>
     </nav>
-    <button class="hidden sm:flex h-9 px-4 items-center justify-center rounded-lg bg-primary text-white text-sm font-bold hover:bg-pink-600 transition">
-      <span class="material-symbols-outlined text-[18px] mr-2">lock</span>
-      Shareholder Login
-    </button>
+    <div class="flex items-center gap-3">
+      <select id="lang-switch" aria-label="Language" class="text-xs font-medium border border-border rounded pl-2.5 pr-7 py-1.5 bg-white hover:border-primary focus:outline-none focus:ring-1 focus:ring-primary">
+        <option value="en">EN</option>
+        <option value="tr">TR</option>
+      </select>
+      <button class="hidden sm:flex h-9 px-4 items-center justify-center rounded-lg bg-primary text-white text-sm font-bold hover:bg-pink-600 transition">
+        <span class="material-symbols-outlined text-[18px] mr-2">lock</span>
+        Shareholder Login
+      </button>
+    </div>
   </div>
 </header>
