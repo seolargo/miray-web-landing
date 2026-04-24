@@ -19,7 +19,8 @@
   <!-- Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 
-  <link rel="icon" href="/public/favicon.ico"/>
+  <link rel="icon" type="image/svg+xml" href="/public/logo.svg"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/logo.svg"/>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -54,25 +55,10 @@
   </script>
 </head>
 
-<body class="bg-background text-slate-900 font-display">
+<body class="bg-background text-slate-900 font-display" data-page="advertising">
 <div class="min-h-screen flex flex-col">
 
-  <!-- NAV -->
-  <header class="sticky top-0 z-50 bg-white border-b border-border">
-    <div class="max-w-[960px] mx-auto px-6 py-3 flex justify-between items-center">
-      <div class="flex items-center gap-2">
-        <span class="material-symbols-outlined text-primary">favorite</span>
-        <span class="font-bold">Miray</span>
-      </div>
-
-      <nav class="hidden md:flex gap-8 text-sm font-medium">
-        <a href="index.html" class="hover:text-primary">Home</a>
-        <a href="browse.html" class="hover:text-primary">Browse</a>
-        <a href="advertising.html" class="text-primary font-bold">Advertising</a>
-        <a href="contact.html" class="hover:text-primary">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <header id="site-header"></header>
 
   <!-- HERO -->
   <section class="max-w-[960px] mx-auto px-6 py-20 grid md:grid-cols-2 gap-12 items-center">
@@ -168,11 +154,9 @@
     </a>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-white border-t border-border py-8 text-center text-sm text-muted">
-    © 2026 Miray. All rights reserved.
-  </footer>
+  <footer id="site-footer"></footer>
 
 </div>
+<script src="/js/partials.js" defer></script>
 </body>
 </html>

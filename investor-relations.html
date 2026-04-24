@@ -19,7 +19,8 @@
   <!-- Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
 
-  <link rel="icon" href="/public/favicon.ico"/>
+  <link rel="icon" type="image/svg+xml" href="/public/logo.svg"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/logo.svg"/>
 
   <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -31,7 +32,7 @@
       theme: {
         extend: {
           colors: {
-            primary: "#2b8cee",
+            primary: "#f04299",
             "background-light": "#f6f7f8",
             "card": "#ffffff",
             "border": "#e5e7eb",
@@ -52,30 +53,13 @@
   </script>
 </head>
 
-<body class="bg-background-light text-slate-900 font-display overflow-x-hidden">
+<body class="bg-background-light text-slate-900 font-display overflow-x-hidden"
+      data-page="ir"
+      data-header="/partials/ir-header.html"
+      data-footer="/partials/ir-footer.html">
 <div class="flex flex-col min-h-screen">
 
-<!-- Navigation -->
-<header class="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur">
-  <div class="max-w-[1280px] mx-auto px-4 sm:px-10 h-16 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-3 hover:opacity-80 transition">
-      <span class="material-symbols-outlined text-primary text-3xl">mark_chat_read</span>
-      <h2 class="text-lg font-bold tracking-tight">Miray IR</h2>
-    </a>
-    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
-      <a href="#overview" class="hover:text-primary">Overview</a>
-      <a href="#financials" class="hover:text-primary">Financials</a>
-      <a href="#governance" class="hover:text-primary">Governance</a>
-      <a href="#press" class="hover:text-primary">Press</a>
-      <a href="#contact" class="hover:text-primary">Contact</a>
-      <a href="index.html" class="hover:text-primary">Main Site</a>
-    </nav>
-    <button class="hidden sm:flex h-9 px-4 items-center justify-center rounded-lg bg-primary text-white text-sm font-bold hover:bg-blue-600 transition">
-      <span class="material-symbols-outlined text-[18px] mr-2">lock</span>
-      Shareholder Login
-    </button>
-  </div>
-</header>
+<header id="site-header"></header>
 
 <!-- Hero -->
 <section id="overview">
@@ -93,7 +77,7 @@
           Miray is redefining how people connect through meaningful questions and data-driven insights.
         </p>
         <div class="flex gap-4 flex-wrap">
-          <button class="h-12 px-6 rounded-lg bg-primary text-white font-bold hover:bg-blue-600 transition">
+          <button class="h-12 px-6 rounded-lg bg-primary text-white font-bold hover:bg-pink-600 transition">
             Download Investor Deck
           </button>
           <button class="h-12 px-6 rounded-lg border border-white/30 text-white hover:bg-white/10 transition">
@@ -202,14 +186,9 @@
 
 </div>
 
-<!-- Footer -->
-<footer class="border-t border-border bg-white py-10">
-  <div class="max-w-[1280px] mx-auto px-4 sm:px-10 text-sm text-text-muted flex justify-between">
-    <span>© 2026 Miray Inc.</span>
-    <span>Investor information only</span>
-  </div>
-</footer>
+<footer id="site-footer"></footer>
 
 </div>
+<script src="/js/partials.js" defer></script>
 </body>
 </html>
