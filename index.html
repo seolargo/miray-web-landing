@@ -130,12 +130,18 @@
 <body class="bg-soft text-[#0d141b] font-display" data-page="home">
 <div class="min-h-screen flex flex-col">
 
-<header id="site-header">
-  <div class="max-w-[960px] mx-auto px-6 py-5 flex items-center gap-2">
+<header id="site-header" class="sticky top-0 z-50 bg-white border-b border-border">
+  <div class="max-w-[960px] mx-auto px-6 py-5 flex items-center justify-between">
     <a href="/" class="flex items-center gap-2">
       <img src="/public/logo.svg" alt="Miray logo" class="logo" width="28" height="28"/>
       <span class="font-bold">Miray</span>
     </a>
+    <nav class="flex gap-6 text-sm font-medium" aria-label="Primary">
+      <a href="/index.html" class="hover:text-primary">Home</a>
+      <a href="/browse.html" class="hover:text-primary">Browse</a>
+      <a href="/advertising.html" class="hover:text-primary">Advertising</a>
+      <a href="/contact.html" class="hover:text-primary">Contact</a>
+    </nav>
   </div>
 </header>
 
@@ -153,11 +159,14 @@
       Miray helps you break the ice, skip awkward silence, and build real emotional connection — whether it’s a first date or a long-term relationship.
     </p>
 
-    <a href="https://play.google.com/store/apps/details?id=com.miray" target="_blank">
+    <a href="https://play.google.com/store/apps/details?id=com.miray" target="_blank" rel="noopener">
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
         class="h-14"
         alt="Get it on Google Play"
+        width="200"
+        height="56"
+        decoding="async"
         data-i18n-attr="alt:hero.playstore.alt"
       />
     </a>
@@ -176,6 +185,10 @@
       src="https://images.pexels.com/photos/4691222/pexels-photo-4691222.jpeg"
       class="w-full h-full object-cover"
       alt="Couple talking"
+      width="640"
+      height="800"
+      fetchpriority="high"
+      decoding="async"
       data-i18n-attr="alt:hero.couple.alt"
     />
   </div>
@@ -188,7 +201,7 @@
     <!-- 1 -->
     <div class="rounded-xl overflow-hidden shadow-glow bg-white">
       <img src="https://images.pexels.com/photos/532826/pexels-photo-532826.jpeg"
-           class="h-[220px] w-full object-cover"
+           class="h-[220px] w-full object-cover" loading="lazy" decoding="async" width="360" height="220"
            alt="Paris evening skyline"/>
       <div class="p-4">
         <h4 class="font-bold mb-1" data-i18n="europe1.paris.title">Paris Evenings</h4>
@@ -201,7 +214,7 @@
     <!-- 2 -->
     <div class="rounded-xl overflow-hidden shadow-glow bg-white translate-y-6">
       <img src="https://images.pexels.com/photos/7473036/pexels-photo-7473036.jpeg"
-           class="h-[220px] w-full object-cover"
+           class="h-[220px] w-full object-cover" loading="lazy" decoding="async" width="360" height="220"
            alt="Couple walking together in Rome"/>
       <div class="p-4">
         <h4 class="font-bold mb-1" data-i18n="europe1.rome.title">Rome Walks</h4>
@@ -214,7 +227,7 @@
     <!-- 3 -->
     <div class="rounded-xl overflow-hidden shadow-glow bg-white">
       <img src="https://images.pexels.com/photos/29574919/pexels-photo-29574919.jpeg"
-           class="h-[220px] w-full object-cover"
+           class="h-[220px] w-full object-cover" loading="lazy" decoding="async" width="360" height="220"
            alt="Old European cobblestone street"/>
       <div class="p-4">
         <h4 class="font-bold mb-1" data-i18n="europe1.old.title">Old Streets</h4>
@@ -227,7 +240,7 @@
     <!-- 4 -->
     <div class="rounded-xl overflow-hidden shadow-glow bg-white">
       <img src="https://images.pexels.com/photos/14690503/pexels-photo-14690503.jpeg"
-           class="h-[220px] w-full object-cover"
+           class="h-[220px] w-full object-cover" loading="lazy" decoding="async" width="360" height="220"
            alt="Quiet café moment"/>
       <div class="p-4">
         <h4 class="font-bold mb-1" data-i18n="europe1.cafe.title">Café Moments</h4>
@@ -240,7 +253,7 @@
     <!-- 5 -->
     <div class="rounded-xl overflow-hidden shadow-glow bg-white translate-y-6">
       <img src="https://images.pexels.com/photos/33435611/pexels-photo-33435611.jpeg"
-           class="h-[220px] w-full object-cover"
+           class="h-[220px] w-full object-cover" loading="lazy" decoding="async" width="360" height="220"
            alt="Couple in golden hour light"/>
       <div class="p-4">
         <h4 class="font-bold mb-1" data-i18n="europe1.golden.title">Golden Hours</h4>
@@ -253,7 +266,7 @@
     <!-- 6 -->
     <div class="rounded-xl overflow-hidden shadow-glow bg-white">
       <img src="https://images.pexels.com/photos/4223976/pexels-photo-4223976.jpeg"
-           class="h-[220px] w-full object-cover"
+           class="h-[220px] w-full object-cover" loading="lazy" decoding="async" width="360" height="220"
            alt="Couple on an evening stroll"/>
       <div class="p-4">
         <h4 class="font-bold mb-1" data-i18n="europe1.stroll.title">Evening Strolls</h4>
@@ -333,7 +346,7 @@
   <div class="grid md:grid-cols-2 gap-8 items-center">
     <div class="rounded-xl overflow-hidden shadow-glow">
       <img src="https://images.pexels.com/photos/9736121/pexels-photo-9736121.jpeg"
-           class="h-[720px] w-full object-cover"
+           class="h-[720px] w-full object-cover" loading="lazy" decoding="async" width="550" height="720"
            alt="Couple sharing a quiet moment"/>
     </div>
 
@@ -361,7 +374,7 @@
         <div class="flex items-center gap-4 mb-4">
           <img
             src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg"
-            class="w-12 h-12 rounded-full object-cover"
+            class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async" width="48" height="48"
             alt="Alex Morgan"
           />
           <div>
@@ -378,7 +391,7 @@
         <div class="flex items-center gap-4 mb-4">
           <img
             src="https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg"
-            class="w-12 h-12 rounded-full object-cover"
+            class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async" width="48" height="48"
             alt="Sophie Laurent"
           />
           <div>
@@ -395,7 +408,7 @@
         <div class="flex items-center gap-4 mb-4">
           <img
             src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg"
-            class="w-12 h-12 rounded-full object-cover"
+            class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async" width="48" height="48"
             alt="Daniel Fischer"
           />
           <div>
@@ -412,7 +425,7 @@
         <div class="flex items-center gap-4 mb-4">
           <img
             src="https://images.pexels.com/photos/32525235/pexels-photo-32525235.jpeg"
-            class="w-12 h-12 rounded-full object-cover"
+            class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async" width="48" height="48"
             alt="Lukas Weber"
           />
           <div>
@@ -429,7 +442,7 @@
         <div class="flex items-center gap-4 mb-4">
           <img
             src="https://images.pexels.com/photos/4681850/pexels-photo-4681850.jpeg"
-            class="w-12 h-12 rounded-full object-cover"
+            class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async" width="48" height="48"
             alt="Emma Collins"
           />
           <div>
@@ -446,7 +459,7 @@
         <div class="flex items-center gap-4 mb-4">
           <img
             src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg"
-            class="w-12 h-12 rounded-full object-cover"
+            class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async" width="48" height="48"
             alt="Marco Bianchi"
           />
           <div>
@@ -463,7 +476,7 @@
         <div class="flex items-center gap-4 mb-4">
           <img
             src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg"
-            class="w-12 h-12 rounded-full object-cover"
+            class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async" width="48" height="48"
             alt="Clara Jensen"
           />
           <div>
@@ -480,7 +493,7 @@
         <div class="flex items-center gap-4 mb-4">
           <img
             src="https://images.pexels.com/photos/16886374/pexels-photo-16886374.jpeg"
-            class="w-12 h-12 rounded-full object-cover"
+            class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async" width="48" height="48"
             alt="Jonas Müller"
           />
           <div>
@@ -497,7 +510,7 @@
         <div class="flex items-center gap-4 mb-4">
           <img
             src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg"
-            class="w-12 h-12 rounded-full object-cover"
+            class="w-12 h-12 rounded-full object-cover" loading="lazy" decoding="async" width="48" height="48"
             alt="Sofia Alvarez"
           />
           <div>
@@ -523,11 +536,13 @@
   </p>
 
   <div class="flex justify-center gap-6 flex-wrap">
-    <a href="https://play.google.com/store/apps/details?id=com.miray" target="_blank">
+    <a href="https://play.google.com/store/apps/details?id=com.miray" target="_blank" rel="noopener">
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
         class="h-14"
         alt="Get it on Google Play"
+        loading="lazy"
+        decoding="async"
       />
     </a>
 
@@ -536,16 +551,25 @@
       class="h-14 opacity-60 grayscale"
       alt="Download on the App Store – coming soon"
       aria-label="Download on the App Store – coming soon"
+      loading="lazy"
+      decoding="async"
     />
   </div>
 </section>
 
-<div class="sr-only" aria-hidden="true">
-  <a href="mailto:mail.omerfaruk@gmail.com">mail.omerfaruk@gmail.com</a>
-  <a href="tel:+905346963285">+90 534 696 32 85</a>
-</div>
-
-<footer id="site-footer"></footer>
+<footer id="site-footer" class="bg-white border-t border-border py-10 text-center text-sm text-muted">
+  <nav class="flex flex-wrap justify-center gap-6 mb-4" aria-label="Footer">
+    <a href="/index.html" class="hover:text-primary">Home</a>
+    <a href="/browse.html" class="hover:text-primary">Browse</a>
+    <a href="/advertising.html" class="hover:text-primary">Advertising</a>
+    <a href="/contact.html" class="hover:text-primary">Contact</a>
+  </nav>
+  <div class="flex flex-wrap justify-center gap-6 mb-4">
+    <a href="mailto:mail.omerfaruk@gmail.com" class="hover:text-primary">mail.omerfaruk@gmail.com</a>
+    <a href="tel:+905346963285" class="hover:text-primary">+90 534 696 32 85</a>
+  </div>
+  <span>&copy; 2026 Miray. All rights reserved.</span>
+</footer>
 
 </div>
 <script src="/js/partials.js?v=3" defer></script>

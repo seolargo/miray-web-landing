@@ -74,7 +74,22 @@
       data-footer="/partials/ir-footer.html">
 <div class="flex flex-col min-h-screen">
 
-<header id="site-header"></header>
+<header id="site-header" class="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-10 h-16 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-3">
+      <img src="/public/logo.svg" alt="Miray logo" class="logo" width="28" height="28"/>
+      <h2 class="text-lg font-bold tracking-tight">Miray IR</h2>
+    </a>
+    <nav class="flex items-center gap-8 text-sm font-medium" aria-label="Investor">
+      <a href="#overview" class="hover:text-primary">Overview</a>
+      <a href="#financials" class="hover:text-primary">Financials</a>
+      <a href="#governance" class="hover:text-primary">Governance</a>
+      <a href="#press" class="hover:text-primary">Press</a>
+      <a href="#contact" class="hover:text-primary">Contact</a>
+      <a href="/index.html" class="hover:text-primary">Main Site</a>
+    </nav>
+  </div>
+</header>
 
 <!-- Hero -->
 <section id="overview">
@@ -201,7 +216,16 @@
 
 </div>
 
-<footer id="site-footer"></footer>
+<footer id="site-footer" class="border-t border-border bg-white py-10">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-10 text-sm text-text-muted flex flex-wrap justify-between gap-4">
+    <span>&copy; 2026 Miray Inc.</span>
+    <div class="flex gap-6">
+      <a href="mailto:mail.omerfaruk@gmail.com" class="hover:text-primary">mail.omerfaruk@gmail.com</a>
+      <a href="tel:+905346963285" class="hover:text-primary">+90 534 696 32 85</a>
+    </div>
+    <span>Investor information only</span>
+  </div>
+</footer>
 
 </div>
 <script src="/js/partials.js?v=3" defer></script>
